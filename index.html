@@ -24,18 +24,22 @@
     </main>
     <section data-transition="instant" id="growing-content">
         <button onclick="deactivateGrowingContent()" class="back">Back</button>
-        <div id="projectsContainer">
-            <div class="project">
+        <div class="absoluteGridContainer">
+            <div data-focused="false" onclick="focusProject('project1')" id="project1" class="project">
                 <h3>C++ Rasterizer</h3>
+                <button onclick="deFocusProject('project1')">shrink</button>
             </div>
-            <div class="project">
+            <div data-focused="false" onclick="focusProject('project2')" id="project2" class="project">
                 <h3>Chess Online</h3>
+                <button onclick="deFocusProject('project2')">shrink</button>
             </div>
-            <div class="project">
+            <div data-focused="false" onclick="focusProject('project3')" id="project3" class="project">
                 <h3>Bug Tracker</h3>
+                <button onclick="deFocusProject('project3')">shrink</button>
             </div>
-            <div class="project">
+            <div data-focused="false" onclick="focusProject('project4')" id="project4" class="project">
                 <h3>Chemical SDS</h3>
+                <button onclick="deFocusProject('project4')">shrink</button>
             </div>
         </div>
     </section>
