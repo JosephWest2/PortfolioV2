@@ -1,0 +1,22 @@
+:root {
+    --growing-polygon: polygon(0 0, 0 0, 0 0, 0 0);
+}
+
+#growing-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-red);
+    clip-path: var(--growing-polygon);
+}
+#growing-content[data-transition="fast"] {
+    transition: clip-path var(--transition-fast) ease-in;
+}
+#growing-content[data-transition="slow"] {
+    transition: clip-path 400ms ease-in;
+}
+#growing-content[data-transition="fastEaseOut"] {
+    transition: clip-path var(--transition-fast) ease-out;
+}

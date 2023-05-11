@@ -1,0 +1,34 @@
+:root {
+    --dot-x-offset: -100px;
+    --dot-y-offset: -100px;
+}
+
+#expanded-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-blue);
+    width: 100%;
+    height: 100vh;
+    clip-path: circle(0 at var(--dot-x-offset) var(--dot-y-offset));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events:none;
+    
+}
+#expanded-content[data-transition="slow"] {
+    transition: clip-path var(--transition-slow) linear;
+}
+#expanded-content[data-transition="fast"] {
+    transition: clip-path var(--transition-fast) ease-out;
+}
+#expanded-content[data-peek="true"] {
+    clip-path: circle(1rem at var(--dot-x-offset) var(--dot-y-offset));
+}
+#expanded-content[data-visible="true"] {
+    clip-path: circle(calc(var(--circle-scale)) at var(--dot-x-offset) var(--dot-y-offset));
+    pointer-events: auto;
+}

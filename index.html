@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <link href="growingUnderline.css" rel="stylesheet">
+    <link href="iExpanding.css" rel="stylesheet">
+    <script src="main.js" defer="true"></script>
+    <script src="growingUnderline.js" defer="true"></script>
+    <script src="iExpanding.js" defer="true"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="elipsis">
+            <h1>Joseph West</h1>
+        </div>
+        <div id="options">
+            <h2 onclick="activateGrowingContent()" onmouseleave="unPeekUnderline()" id="projectHeader" onmouseover="changeActiveColor('red'); peekUnderline();">Projects</h2>
+            <h2 onmouseleave="unPeekIExpansion()" onclick="activateIExpansion()" id="skillsHeader" onmouseover="changeActiveColor('blue'); peekIExpansion();">Sk<span id="expanding-i">i</span>lls</h2>
+            <h2 id="ContactHeader" onmouseover="changeActiveColor('green')">Contact</h2>
+        </div>
+        
+    </main>
+    <div data-transition="instant" id="growing-content"></div>
+    <div data-transition="false" data-visible="false" id="expanded-content"></div>
+</body>
+</html>
