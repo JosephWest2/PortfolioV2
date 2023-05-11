@@ -5,6 +5,7 @@ const underlinedElementId = "projectHeader";
 const growingContentId = "growing-content";
 
 function peekUnderline() {
+    if (growthActivated) {return}
     underlineHovered = true;
     const growingContent = document.getElementById(growingContentId);
     const underlineH1 = document.getElementById(underlinedElementId);
@@ -55,5 +56,28 @@ function activateGrowingContent() {
     }, 100)
     setTimeout(() => {
         document.documentElement.style.setProperty("--growing-polygon", `polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)`);
+    }, 900)
+}
+
+function deactivateGrowingContent() {
+    growthActivated = false;
+    const growingContent = document.getElementById(growingContentId);
+    const underlineH1 = document.getElementById(underlinedElementId);
+    underlineH1.dataset.clickable = "true";
+    let underlineH1Rect = underlineH1.getBoundingClientRect();
+    growingContent.dataset.transition = "slow";
+
+    let x0 = underlineH1Rect.left + underlineH1Rect.width / 2;
+    let y0 = underlineH1Rect.bottom;
+
+    setTimeout(() => {
+        let x1 = 0;
+        let y1 = underlineH1Rect.bottom;
+        let x2 = 100;
+        let y2 = underlineH1Rect.bottom + 3;
+        document.documentElement.style.setProperty("--growing-polygon", `polygon(${x1}px ${y1}px,${x1}px ${y2}px,${x2}% ${y2}px,${x2}% ${y1}px)`);
+    }, 100)
+    setTimeout(() => {
+        document.documentElement.style.setProperty("--growing-polygon", `polygon(${x0}px ${y0}px,${x0}px ${y0+3}px,${x0}px ${y0+3}px,${x0}px ${y0}px)`);
     }, 900)
 }

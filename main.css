@@ -9,10 +9,12 @@
     --bg-color: hsl(0, 0%, 10%);
     --light-text: hsl(0, 0%, 90%);
     --dark-text: hsl(0, 0%, 15%);
-    --color-green: hsla(155, 100%, 69%, 0.8);
-    --color-red: hsla(0, 100%, 60%, 0.8);
-    --color-blue: hsla(209, 100%, 61%, 0.8);
+    --color-green: hsl(155, 74%, 69%);
+    --color-red: hsl(0, 88%, 74%);
+    --color-blue: hsl(209, 73%, 68%);
     --color-active: var(--color-green);
+    --color-grey: hsl(0, 0%, 13%);
+    --dark-text: hsla(0, 0%, 16%, 0.8);
 
     --transition-fast: 300ms;
     --transition-slow: 800ms;
@@ -33,15 +35,32 @@ main {
     align-items: center;
     padding: 4rem;
 }
+section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
 h1 {
+    font-size: 3em;
+}
+main > h1 {
     color: var(--color-active);
     text-shadow: 0 0 1rem var(--color-active);
-    font-size: 3em;
     transition: text-shadow var(--transition-fast) linear, color var(--transition-fast) linear;
+}
+section > h1 {
+    color: var(--bg-color);
 }
 h2 {
     color: var(--light-text);
     font-size: 3em;
+}
+h3 {
+    color: var(--dark-text);
+    font-size: 1.5em;
 }
 #options {
     display: flex;
@@ -58,6 +77,39 @@ h2 {
 #options > h2 {
     cursor: pointer;
 }
+#projectsContainer {
+    display: grid;
+    padding: 5rem;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 1000px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+.project {
+    background-color: var(--color-green);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    border-radius: 0.5rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+.back {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--dark-text);
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+}
+.back:hover {
+    cursor: pointer;
+}
 
 
