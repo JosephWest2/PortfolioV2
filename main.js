@@ -1,3 +1,5 @@
+const PI = 3.14159
+
 function changeActiveColor(color) {
     colors = {
         red: "var(--color-red)",
@@ -9,11 +11,9 @@ function changeActiveColor(color) {
     document.documentElement.style.setProperty("--color-active", colors[color]);
 }
 
-let focusStatus = false;
-
 function focusProject(id) {
-    if (focusStatus === true) {focusStatus = false; return;}
     const project = document.getElementById(id);
+    if (project.dataset.focused !== "false") {return;}
     project.dataset.focused = "true";
     focusStatus = true;
 }
@@ -37,25 +37,107 @@ function deFocusAllProjects() {
 
 const growingContent = document.getElementById("growing-content");
 growingContent.addEventListener("click", (e) => {
-    if (e.target === growingContent) {deFocusAllProjects(); focusStatus = false;};
+    if (e.target === growingContent) {deFocusAllProjects()};
 })
 
+function renderSkillsCircle(circleRotationRadians) {
+    const skillsContainer = document.getElementById("skillsContainer");
+    const skills = document.querySelectorAll(".skill");
+    const skillsContainerRect = skillsContainer.getBoundingClientRect();
+    let radius = Math.min(skillsContainerRect.width/2, skillsContainerRect.height/2);
+    document.documentElement.style.setProperty("--skills-circle-radius", radius + "px");
+    let center = {x: skillsContainerRect.width/2, y: skillsContainerRect.height/2};
+    
+    let deltaRadians = PI * 2 /skills.length;
+    let iterationRadians = circleRotationRadians;
+    
+    
+    skills.forEach(skillNode => {
+        let nodeX = Math.cos(iterationRadians) * radius + center.x;
+        let nodeY = Math.sin(iterationRadians) * radius + center.y;
+        iterationRadians += deltaRadians;
+        skillNode.style.left = nodeX + "px";
+        skillNode.style.top = nodeY + "px";
+    })
+};
 
-const skillsContainer = document.getElementById("skillsContainer");
-const skills = document.querySelectorAll(".skill");
-const skillsCount = skills.length;
-const skillsContainerRect = skillsContainer.getBoundingClientRect();
-let radius = Math.min(skillsContainerRect.width/2, skillsContainerRect.height/2);
-let center = (skillsContainerRect.width/2, skillsContainerRect.height/2);
-const PI = 3.14159;
+let skillMouseDown = false;
+let startingX = 0;
+let startingY = 0;
+let tangentVector = {
+    x: 0,
+    y: 0,
+}
 
 let circleRotation = 0;
-let deltaRadians = PI * 2 /skills.length;
-let iterationRadians = 0;
+
+let skillsIntervalId;
+let currentClientX = 0;
+let currentClientY = 0;
+let circleVelocity = 0;
+
+function applySkillsClickListeners() {
+
+    const dotProductScalar = 2000000;
+
+    const skills = document.querySelectorAll(".skill");
+    skills.forEach(skill => {
+        skill.addEventListener("mousedown", (e) => {
+            if (skillMouseDown) {return;}
+
+            document.body.style.cursor = "grabbing";
+            startingX = e.clientX;
+            startingY = e.clientY;
+
+            const skillsContainer = document.getElementById("skillsContainer");
+            const skillsContainerRect = skillsContainer.getBoundingClientRect();
+            let center = {x: skillsContainerRect.width/2, y: skillsContainerRect.height/2};
+            
+            let V = {x: startingX - center.x, y: startingY - center.y};
+            tangentVector = {x: -V.y, y: V.x};
+
+            skillMouseDown = true;
+            skillsIntervalId = setInterval(() => {
+
+                const deltaX = startingX - currentClientX;
+                const deltaY =  startingY - currentClientY;
+
+                const dotProduct = -1 * (tangentVector.x * deltaX + tangentVector.y * deltaY);
+                circleVelocity = Math.min(dotProduct, 140000);
+
+                circleRotation += circleVelocity / dotProductScalar;
+                circleRotation %= PI * 2;
+                renderSkillsCircle(circleRotation);
+            },10)
+        });
+    });
+    window.addEventListener("mouseup", (e) => {
+        document.body.style.cursor = "";
+        skillMouseDown = false;
+        const slowDownIntervalId = setInterval(() => {
+            circleVelocity *= 0.9;
+            console.log(circleVelocity)
+            if (Math.abs(circleVelocity) < 0.01) {
+                clearInterval(slowDownIntervalId);
+            }
+            circleRotation += circleVelocity / dotProductScalar;
+            circleRotation %= PI * 2;
+            renderSkillsCircle(circleRotation);
+        
+        }, 10);
+        clearInterval(skillsIntervalId);
+    });
+    window.addEventListener("mousemove", (e) => {
+        currentClientX = e.clientX;
+        currentClientY = e.clientY;
+    })
+};
 
 
-skills.forEach(skillNode => {
-    let nodeX = interationRadians;
+
+applySkillsClickListeners();
+renderSkillsCircle(0);
+
+window.addEventListener("resize", () => {
+    renderSkillsCircle(0);
 })
-
-

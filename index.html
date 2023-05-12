@@ -20,44 +20,111 @@
             <h2 onmouseleave="unPeekIExpansion()" onclick="activateIExpansion()" id="skillsHeader" onmouseover="changeActiveColor('blue'); peekIExpansion();">Sk<span id="expanding-i">i</span>lls</h2>
             <h2 id="ContactHeader" onmouseover="changeActiveColor('red')">Contact</h2>
         </div>
-        
+    
     </main>
+    
     <section data-transition="instant" id="growing-content">
         <button onclick="deactivateGrowingContent()" class="back">Back</button>
         <div class="absoluteGridContainer">
             <div data-focused="false" onclick="focusProject('project1')" id="project1" class="project">
                 <h3>C++ Rasterizer</h3>
-                <button onclick="deFocusProject('project1')">shrink</button>
-                <div class="projectContent">
+                <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project1')">X</button></div>
+                <div class="projectContentContainer">
                     <div class="image"></div>
-                    <div style="display: none">hello</div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                    <div class="links">
+                        <a class="btn">Live</a>
+                        <a class="btn">Source Code</a>
+                    </div>
                 </div>
             </div>
             <div data-focused="false" onclick="focusProject('project2')" id="project2" class="project">
                 <h3>Chess Online</h3>
-                <button onclick="deFocusProject('project2')">shrink</button>
+                <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project2')">X</button></div>
+                <div class="projectContentContainer">
+                    <div class="image"></div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                    <div class="links">
+                        <a class="btn">Live</a>
+                        <a class="btn">Source Code</a>
+                    </div>
+                </div>
             </div>
             <div data-focused="false" onclick="focusProject('project3')" id="project3" class="project">
                 <h3>Bug Tracker</h3>
-                <button onclick="deFocusProject('project3')">shrink</button>
+                <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project3')">X</button></div>
+                <div class="projectContentContainer">
+                    <div class="image"></div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                    <div class="links">
+                        <a class="btn">Live</a>
+                        <a class="btn">Source Code</a>
+                    </div>
+                </div>
             </div>
             <div data-focused="false" onclick="focusProject('project4')" id="project4" class="project">
                 <h3>Chemical SDS</h3>
-                <button onclick="deFocusProject('project4')">shrink</button>
+                <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project4')">X</button></div>
+                <div class="projectContentContainer">
+                    <div class="image"></div>
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                    <div class="links">
+                        <a class="btn">Live</a>
+                        <a class="btn">Source Code</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <div id="tempUnderline"></div>
     <section data-transition="false" data-visible="false" id="expanded-content">
         <button onclick="deactivateIExpansion()" class="back">Back</button>
-        <div id="skillsContainer">
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
-            <div class="skill">Skill</div>
+        <div id="skillsOuterContentContainer">
+            <div id="skillsContainer">
+                <svg class="circle" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="49.5" stroke="black"/>
+                    </svg>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/csLogo.png" alt="C Sharp">
+                    <figcaption>C#</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/netLogo.png" alt="ASP.NET">
+                    <figcaption>ASP.NET</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/htmlLogo2.png" alt="HTML">
+                    <figcaption>HTML</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/cssLogo.jpg" alt="CSS">
+                    <figcaption>CSS</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/javascriptLogo.png" alt="Javascript">
+                    <figcaption>Javascript</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/reactLogo.png" alt="React">
+                    <figcaption>React</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/sqlLogo.png" alt="SQL">
+                    <figcaption>SQL</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/gitLogo.png" alt="Git">
+                    <figcaption>Git</figcaption>
+                </div>
+                <div class="skill">
+                    <img class="skillLogo" src="./img/skills/pythonLogo.png" alt="Python">
+                    <figcaption>Python</figcaption>
+                </div>
+            </div>
+            <div class="resumeContainer">
+                <h2>Resume</h2>
+                <img src="./img/misc/resumeLogo.png" alt="Resume">
+            </div>
         </div>
     </section>
 </body>

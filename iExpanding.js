@@ -51,3 +51,13 @@ function unPeekIExpansion() {
     const expandedContentElement = document.getElementById(expandingContentId);
     expandedContentElement.dataset.peek = "false";
 }
+
+window.addEventListener("resize", () => {
+    const iElement = document.getElementById(expandingElementId);
+    const iRect = iElement.getBoundingClientRect();
+    let deltaX = iRect.x + iRect.width / 1.8;
+    let deltaY = iRect.y + iRect.height / 4;
+    document.documentElement.style.setProperty("--dot-x-offset", deltaX + "px");
+    document.documentElement.style.setProperty("--dot-y-offset", deltaY + "px");
+    document.documentElement.style.setProperty("--circle-scale", Math.max(window.innerHeight, window.innerWidth) + "px");
+})
