@@ -14,10 +14,10 @@
     clip-path: var(--growing-polygon);
 }
 #growing-content[data-transition="fast"] {
-    transition: clip-path var(--transition-fast) ease-in;
+    transition: clip-path var(--transition-fast) ease-out;
 }
 #growing-content[data-transition="slow"] {
-    transition: clip-path 400ms ease-in;
+    transition: clip-path var(--transition-fast) ease-out;
 }
 #growing-content[data-transition="fastEaseOut"] {
     transition: clip-path var(--transition-fast) ease-out;

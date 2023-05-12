@@ -55,7 +55,7 @@ function activateGrowingContent() {
     growingContent.dataset.transition = "slow";
     let x0 = underlineH1Rect.left + underlineH1Rect.width / 2;
     let y0 = underlineH1Rect.bottom;
-    document.documentElement.style.setProperty("--temp-underline-polygon", `polygon(${x0}px ${y0}px,${x0}px ${y0}px,${x0}px ${y0}px,${x0}px ${y0}px)`);
+    document.documentElement.style.setProperty("--temp-underline-polygon", `polygon(${x0}px ${y0}px,${x0}px ${y0+3}px,${x0}px ${y0+3}px,${x0}px ${y0}px)`);
 
     setTimeout(() => {
         let x1 = 0;
