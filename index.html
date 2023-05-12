@@ -10,6 +10,7 @@
     <script src="main.js" defer="true"></script>
     <script src="growingUnderline.js" defer="true"></script>
     <script src="iExpanding.js" defer="true"></script>
+    <script src="matrix.js" defer="true"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
         <div id="options">
             <h2 onclick="activateGrowingContent()" onmouseleave="unPeekUnderline()" id="projectHeader" onmouseover="changeActiveColor('green'); peekUnderline();">Projects</h2>
             <h2 onmouseleave="unPeekIExpansion()" onclick="activateIExpansion()" id="skillsHeader" onmouseover="changeActiveColor('blue'); peekIExpansion();">Sk<span id="expanding-i">i</span>lls</h2>
-            <h2 id="ContactHeader" onmouseover="changeActiveColor('red')">Contact</h2>
+            <h2 onclick="beginMatrix()" id="ContactHeader" onmouseover="changeActiveColor('red')">Contact</h2>
         </div>
     
     </main>
@@ -127,5 +128,6 @@
             </div>
         </div>
     </section>
+    <div id="matrix-content"></div>
 </body>
 </html>

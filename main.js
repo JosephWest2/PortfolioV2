@@ -95,6 +95,7 @@ function applySkillsClickListeners() {
             
             let V = {x: startingX - center.x, y: startingY - center.y};
             tangentVector = {x: -V.y, y: V.x};
+            
 
             skillMouseDown = true;
             skillsIntervalId = setInterval(() => {

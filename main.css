@@ -98,9 +98,11 @@ h3 {
     top: 0;
     left: 0;
     margin: 2rem;
+    transition: opacity var(--transition-fast) ease-out;
 }
 .back:hover {
     cursor: pointer;
+    opacity: 70%;
 }
 
 
@@ -357,3 +359,11 @@ h3 {
     stroke: var(--dark-text);
 }
 
+#ContactHeader {
+    transition: all var(--transition-fast) ease-out;
+}
+#matrix-content {
+    background-color: var(--color-red);
+    position: absolute;
+    transition: all var(--transition-fast) ease-out;
+}
