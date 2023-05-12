@@ -28,6 +28,10 @@
             <div data-focused="false" onclick="focusProject('project1')" id="project1" class="project">
                 <h3>C++ Rasterizer</h3>
                 <button onclick="deFocusProject('project1')">shrink</button>
+                <div class="projectContent">
+                    <div class="image"></div>
+                    <div style="display: none">hello</div>
+                </div>
             </div>
             <div data-focused="false" onclick="focusProject('project2')" id="project2" class="project">
                 <h3>Chess Online</h3>
@@ -45,6 +49,16 @@
     </section>
     <section data-transition="false" data-visible="false" id="expanded-content">
         <button onclick="deactivateIExpansion()" class="back">Back</button>
+        <div id="skillsContainer">
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+            <div class="skill">Skill</div>
+        </div>
     </section>
 </body>
 </html>
