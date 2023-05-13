@@ -19,7 +19,21 @@
         <div id="options">
             <h2 onclick="activateGrowingContent()" onmouseleave="unPeekUnderline()" id="projectHeader" onmouseover="changeActiveColor('green'); peekUnderline();">Projects</h2>
             <h2 onmouseleave="unPeekIExpansion()" onclick="activateIExpansion()" id="skillsHeader" onmouseover="changeActiveColor('blue'); peekIExpansion();">Sk<span id="expanding-i">i</span>lls</h2>
-            <h2 onclick="beginMatrix()" id="ContactHeader" onmouseover="changeActiveColor('red')">Contact</h2>
+            <h2 onclick="beginMatrix()" id="ContactHeader" onmouseover="peekMatrix(); changeActiveColor('red');" onmouseleave="unPeekMatrix()">Contact</h2>
+        </div>
+        <div id="mainLinks">
+            <a href="">
+                <img src="./img/linkIcons/githubLogo.png" alt="Github">
+            </a>
+            <a href="">
+                <img src="./img/linkIcons/linkedInLogo.png" alt="LinkedIn">
+            </a>
+            <a href="">
+                <img src="./img/linkIcons/emailLogo.png" alt="Email">
+            </a>
+            <a href="">
+                <img src="./img/linkIcons/leetcode.png" alt="LeetCode">
+            </a>
         </div>
     
     </main>
@@ -31,11 +45,17 @@
                 <h3>C++ Rasterizer</h3>
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project1')">X</button></div>
                 <div class="projectContentContainer">
-                    <div class="image"></div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
-                    <div class="links">
-                        <a class="btn">Live</a>
-                        <a class="btn">Source Code</a>
+                    <div class="image">
+                        <img src="./img/projects/BugTrackerThumbnail.png" alt="">
+                    </div>
+                    <div class="rightSideContainer">
+                        <div class="rightSideInnerContainer">
+                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="links">
+                                <a class="btn">Live</a>
+                                <a class="btn">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,11 +63,17 @@
                 <h3>Chess Online</h3>
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project2')">X</button></div>
                 <div class="projectContentContainer">
-                    <div class="image"></div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
-                    <div class="links">
-                        <a class="btn">Live</a>
-                        <a class="btn">Source Code</a>
+                    <div class="image">
+                        <img src="./img/projects/ChessOnlineThumbnail.png" alt="">
+                    </div>
+                    <div class="rightSideContainer">
+                        <div class="rightSideInnerContainer">
+                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="links">
+                                <a class="btn">Live</a>
+                                <a class="btn">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,11 +81,17 @@
                 <h3>Bug Tracker</h3>
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project3')">X</button></div>
                 <div class="projectContentContainer">
-                    <div class="image"></div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
-                    <div class="links">
-                        <a class="btn">Live</a>
-                        <a class="btn">Source Code</a>
+                    <div class="image">
+                        <img src="./img/projects/PetMartThumbnail.jpg" alt="">
+                    </div>
+                    <div class="rightSideContainer">
+                        <div class="rightSideInnerContainer">
+                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="links">
+                                <a class="btn">Live</a>
+                                <a class="btn">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,11 +99,17 @@
                 <h3>Chemical SDS</h3>
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project4')">X</button></div>
                 <div class="projectContentContainer">
-                    <div class="image"></div>
-                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
-                    <div class="links">
-                        <a class="btn">Live</a>
-                        <a class="btn">Source Code</a>
+                    <div class="image">
+                        <img src="./img/projects/sortingThumbnail.jpg" alt="">
+                    </div>
+                    <div class="rightSideContainer">
+                        <div class="rightSideInnerContainer">
+                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="links">
+                                <a class="btn">Live</a>
+                                <a class="btn">Source Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,6 +166,17 @@
             </div>
         </div>
     </section>
-    <div id="matrix-content"></div>
+    <div id="matrix-content">
+        <button class="closeMatrixButton exit" onclick="hideMatrix();">X</button>
+        <form action="">
+            <label for="emailInput">Email</label>
+            <input type="text" name="emailInput">
+            <label for="subjectInput">Name</label>
+            <input type="text" name="subjectInput">
+            <label for="messageInput">Message</label>
+            <textarea name="messageInput" id="" cols="30" rows="10"></textarea>
+            <input class="inputSubmit" type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>

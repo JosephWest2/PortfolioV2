@@ -6,7 +6,6 @@ function changeActiveColor(color) {
         blue: "var(--color-blue)",
         green: "var(--color-green)"
     }
-    console.log(color);
 
     document.documentElement.style.setProperty("--color-active", colors[color]);
 }
@@ -95,7 +94,7 @@ function applySkillsClickListeners() {
             
             let V = {x: startingX - center.x, y: startingY - center.y};
             tangentVector = {x: -V.y, y: V.x};
-            
+
 
             skillMouseDown = true;
             skillsIntervalId = setInterval(() => {
@@ -117,7 +116,6 @@ function applySkillsClickListeners() {
         skillMouseDown = false;
         const slowDownIntervalId = setInterval(() => {
             circleVelocity *= 0.9;
-            console.log(circleVelocity)
             if (Math.abs(circleVelocity) < 0.01) {
                 clearInterval(slowDownIntervalId);
             }

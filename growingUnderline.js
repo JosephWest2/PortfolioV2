@@ -16,6 +16,7 @@ function peekUnderline() {
     let x0 = underlineH1Rect.left + underlineH1Rect.width / 2;
     let y0 = underlineH1Rect.bottom;
     growingContent.dataset.transition = "instant";
+    tempUnderline.dataset.transition = "instant";
     document.documentElement.style.setProperty("--growing-polygon", `polygon(${x0}px ${y0}px,${x0}px ${y0}px,${x0}px ${y0}px,${x0}px ${y0}px)`);
     document.documentElement.style.setProperty("--temp-underline-polygon", `polygon(${x0}px ${y0}px,${x0}px ${y0}px,${x0}px ${y0}px,${x0}px ${y0}px)`);
 
