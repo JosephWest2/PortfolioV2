@@ -12,6 +12,7 @@
     height: 100vh;
     -webkit-clip-path: circle(0 at var(--dot-x-offset) var(--dot-y-offset));
             clip-path: circle(0 at var(--dot-x-offset) var(--dot-y-offset));
+    pointer-events: none;
     
 }
 #expanded-content[data-transition="slow"] {
