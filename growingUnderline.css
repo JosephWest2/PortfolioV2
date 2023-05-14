@@ -11,16 +11,23 @@
     width: 100%;
     height: 100%;
     background-color: var(--color-green);
-    clip-path: var(--growing-polygon);
+    -webkit-clip-path: var(--growing-polygon);
+            clip-path: var(--growing-polygon);
 }
 #growing-content[data-transition="fast"] {
+    transition: -webkit-clip-path var(--transition-fast) ease-out;
     transition: clip-path var(--transition-fast) ease-out;
+    transition: clip-path var(--transition-fast) ease-out, -webkit-clip-path var(--transition-fast) ease-out;
 }
 #growing-content[data-transition="slow"] {
+    transition: -webkit-clip-path var(--transition-fast) ease-out;
     transition: clip-path var(--transition-fast) ease-out;
+    transition: clip-path var(--transition-fast) ease-out, -webkit-clip-path var(--transition-fast) ease-out;
 }
 #growing-content[data-transition="fastEaseOut"] {
+    transition: -webkit-clip-path var(--transition-fast) ease-out;
     transition: clip-path var(--transition-fast) ease-out;
+    transition: clip-path var(--transition-fast) ease-out, -webkit-clip-path var(--transition-fast) ease-out;
 }
 
 #tempUnderline {
@@ -28,10 +35,13 @@
     top: 0;
     left: 0;
     background-color: var(--color-green);
-    clip-path: var(--temp-underline-polygon);
+    -webkit-clip-path: var(--temp-underline-polygon);
+            clip-path: var(--temp-underline-polygon);
     width: 100%;
     height: 100%;
 }
 #tempUnderline[data-transition="fastEaseOut"] {
+    transition: -webkit-clip-path var(--transition-fast) ease-out;
     transition: clip-path var(--transition-fast) ease-out;
+    transition: clip-path var(--transition-fast) ease-out, -webkit-clip-path var(--transition-fast) ease-out;
 }
