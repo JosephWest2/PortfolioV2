@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
     <link href="main.css" rel="stylesheet">
     <link href="growingUnderline.css" rel="stylesheet">
     <link href="iExpanding.css" rel="stylesheet">
@@ -22,16 +27,16 @@
             <h2 onclick="beginMatrix()" id="ContactHeader" onmouseover="peekMatrix(); changeActiveColor('red');" onmouseleave="unPeekMatrix()">Contact</h2>
         </div>
         <div id="mainLinks">
-            <a href="">
+            <a target="_blank" href="https://github.com/Jwest11">
                 <img src="./img/linkIcons/githubLogo.png" alt="Github">
             </a>
-            <a href="">
+            <a target="_blank" href="https://www.linkedin.com/in/joseph-west-500a90164/">
                 <img src="./img/linkIcons/linkedInLogo.png" alt="LinkedIn">
             </a>
-            <a href="">
+            <a target="_blank" href="mailto: JoeyWest1414@gmail.com">
                 <img src="./img/linkIcons/emailLogo.png" alt="Email">
             </a>
-            <a href="">
+            <a target="_blank" href="https://leetcode.com/joeywest1414/">
                 <img src="./img/linkIcons/leetcode.png" alt="LeetCode">
             </a>
         </div>
@@ -46,14 +51,15 @@
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project1')">X</button></div>
                 <div class="projectContentContainer">
                     <div class="image">
-                        <img src="./img/projects/BugTrackerThumbnail.png" alt="">
+                        <img src="./img/projects/rasterizerThumbnail.png" alt="Rasterizer Image">
                     </div>
                     <div class="rightSideContainer">
                         <div class="rightSideInnerContainer">
-                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="description">
+                                <p>A C++ rasterizer implemented using solely a cross platform windowing API (SDL). In short, the program transforms triangles specified by 3 coordinates into visible triangles on the screen relative to the location of the user controlled camera.</p>
+                            </div>
                             <div class="links">
-                                <a class="btn">Live</a>
-                                <a class="btn">Source Code</a>
+                                <a target="_blank" href="https://github.com/JWest11/Rasterizer" class="btn">Source Code</a>
                             </div>
                         </div>
                     </div>
@@ -64,14 +70,16 @@
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project2')">X</button></div>
                 <div class="projectContentContainer">
                     <div class="image">
-                        <img src="./img/projects/ChessOnlineThumbnail.png" alt="">
+                        <img src="./img/projects/ChessOnlineThumbnail.png" alt="Chess Online Image">
                     </div>
                     <div class="rightSideContainer">
                         <div class="rightSideInnerContainer">
-                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="description">
+                                <p>An online chess website built with C#, ASP.NET Core Blazor, and implementing SignalR websocket communications. The site works by a user first creating their name, then creating a game (with a specified time control). A link is then created that you can send to another player which allows them to join the game.</p>
+                            </div>
                             <div class="links">
-                                <a class="btn">Live</a>
-                                <a class="btn">Source Code</a>
+                                <a target="_blank" href="http://blazorserverchess.jwest11.com/" class="btn">Live</a>
+                                <a target="_blank" href="https://github.com/JWest11/BlazorServerChess" class="btn">Source Code</a>
                             </div>
                         </div>
                     </div>
@@ -82,14 +90,16 @@
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project3')">X</button></div>
                 <div class="projectContentContainer">
                     <div class="image">
-                        <img src="./img/projects/PetMartThumbnail.jpg" alt="">
+                        <img src="./img/projects/BugTrackerThumbnail.png" alt="Bug Tracker Image">
                     </div>
                     <div class="rightSideContainer">
                         <div class="rightSideInnerContainer">
-                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="description">
+                                <p>A bug tracker built with Python and the Flask web framework. Includes basic CRUD operations, file uploading, authentication, roles, and a relational data structure.</p>
+                            </div>
                             <div class="links">
-                                <a class="btn">Live</a>
-                                <a class="btn">Source Code</a>
+                                <a target="_blank" href="http://bugtracker.jwest11.com/" class="btn">Live</a>
+                                <a target="_blank" href="https://github.com/JWest11/BugTracker" class="btn">Source Code</a>
                             </div>
                         </div>
                     </div>
@@ -100,14 +110,16 @@
                 <div class="exit"><button class="closeProjectButton" onclick="deFocusProject('project4')">X</button></div>
                 <div class="projectContentContainer">
                     <div class="image">
-                        <img src="./img/projects/sortingThumbnail.jpg" alt="">
+                        <img src="./img/projects/chemicalSDSThumbnail.png" alt="Chemical SDS Image">
                     </div>
                     <div class="rightSideContainer">
                         <div class="rightSideInnerContainer">
-                            <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis itaque dicta voluptatem praesentium! Incidunt debitis similique tempore autem sint harum blanditiis veniam culpa. Dolore dignissimos atque ex non distinctio!</div>
+                            <div class="description">
+                                <p>A React, NextJS website that querries and displays SDS information on a chemical. Info is retrieved from the PubChem public API, and the openai GPT3.5 turbo API is querried to ask for safety information about the chemical specified.</p>
+                            </div>
                             <div class="links">
-                                <a class="btn">Live</a>
-                                <a class="btn">Source Code</a>
+                                <a target="_blank" href="http://quickchem.jwest11.com/" class="btn">Live</a>
+                                <a target="_blank" href="https://github.com/JWest11/QuickChem" class="btn">Source Code</a>
                             </div>
                         </div>
                     </div>
@@ -171,7 +183,7 @@
         <form action="">
             <label for="emailInput">Email</label>
             <input type="text" name="emailInput">
-            <label for="subjectInput">Name</label>
+            <label for="subjectInput">Subject</label>
             <input type="text" name="subjectInput">
             <label for="messageInput">Message</label>
             <textarea name="messageInput" id="" cols="30" rows="10"></textarea>

@@ -71,7 +71,6 @@ function activateGrowingContent() {
 }
 
 function deactivateGrowingContent() {
-    growthActivated = false;
     const growingContent = document.getElementById(growingContentId);
     const underlineH1 = document.getElementById(underlinedElementId);
     const tempUnderline = document.getElementById(underlineTempId);
@@ -91,6 +90,7 @@ function deactivateGrowingContent() {
         document.documentElement.style.setProperty("--growing-polygon", `polygon(${x1}px ${y1}px,${x1}px ${y2}px,${x2}% ${y2}px,${x2}% ${y1}px)`);
     }, 100)
     setTimeout(() => {
+        growthActivated = false;
         document.documentElement.style.setProperty("--growing-polygon", `polygon(${x0}px ${y0}px,${x0}px ${y0+3}px,${x0}px ${y0+3}px,${x0}px ${y0}px)`);
     }, 900)
 }
