@@ -411,6 +411,21 @@ h3 {
     stroke: var(--dark-text);
 }
 
+.circleArrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: calc(var(--skills-circle-radius) * 2);
+    width: calc(var(--skills-circle-radius) * 2);
+    transform: translateX(-50%);
+}
+.circleArrow > .path1 {
+    stroke: var(--dark-text);
+}
+.circleArrow > .path2 {
+    fill: var(--dark-text);
+}
+
 #ContactHeader {
     transition: all var(--transition-fast) ease-out;
 }

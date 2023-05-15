@@ -103,7 +103,12 @@ function applySkillsClickListeners() {
                 const deltaY =  startingY - currentClientY;
 
                 const dotProduct = -1 * (tangentVector.x * deltaX + tangentVector.y * deltaY);
-                circleVelocity = Math.min(dotProduct, 140000);
+                if (dotProduct < 0) {
+                    circleVelocity = Math.max(dotProduct, -140000);
+                } else {
+                    circleVelocity = Math.min(dotProduct, 140000);
+                }
+                
 
                 circleRotation += circleVelocity / dotProductScalar;
                 circleRotation %= PI * 2;
