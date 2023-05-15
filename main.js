@@ -104,9 +104,9 @@ function applySkillsClickListeners() {
 
                 const dotProduct = -1 * (tangentVector.x * deltaX + tangentVector.y * deltaY);
                 if (dotProduct < 0) {
-                    circleVelocity = Math.max(dotProduct, -140000);
+                    circleVelocity = Math.max(dotProduct, -100000);
                 } else {
-                    circleVelocity = Math.min(dotProduct, 140000);
+                    circleVelocity = Math.min(dotProduct, 100000);
                 }
                 
 
