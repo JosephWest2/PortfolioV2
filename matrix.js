@@ -12,7 +12,7 @@ function beginMatrix() {
     const iRect = H1Element.getBoundingClientRect();
     matrixDeltaX = iRect.left - (window.innerWidth / 2) + (iRect.width/2);
     matrixDeltaY = iRect.top - (window.innerHeight / 8);
-    H1Element.style.transform = `translateX(${-matrixDeltaX}px) translateY(${-matrixDeltaY}px) scaleX(5) scaleY(0.2)`;
+    H1Element.style.transform = `translateX(${-matrixDeltaX}px) translateY(${-matrixDeltaY}px) scaleX(4) scaleY(0.2)`;
     H1Element.style.color = "var(--color-red)";
     H1Element.style.backgroundColor = "var(--color-red)";
     const matrixContent = document.getElementById(matrixContentId);
