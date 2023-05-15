@@ -90,7 +90,7 @@ function applySkillsClickListeners() {
 
             const skillsContainer = document.getElementById("skillsContainer");
             const skillsContainerRect = skillsContainer.getBoundingClientRect();
-            let center = {x: skillsContainerRect.width/2, y: skillsContainerRect.height/2};
+            let center = {x: skillsContainerRect.x + skillsContainerRect.width/2, y: skillsContainerRect.y + skillsContainerRect.height/2};
             
             let V = {x: startingX - center.x, y: startingY - center.y};
             tangentVector = {x: -V.y, y: V.x};
